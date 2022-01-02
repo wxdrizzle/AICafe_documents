@@ -626,7 +626,7 @@ Numpy functions, methods, and attributes, but also has some additional methods a
 <p>By default, its shape is always <code>[..., 3]</code>, where 3 indicates the dimension. 
 For example, a <code>Points</code> instance with shape of <code>[2, 4, 3]</code> contains the coordinates of <span class="arithmatex">\(2\times4=8\)</span> 3D points.</p>
 <div class="admonition warning">
-<p class="admonition-title">Keep the last dimension as 3</p>
+<p class="admonition-title">Keep the last dimension equal to 3</p>
 <p>There is no restriction on changing the last dimension from 3 to any other number. 
 However, all methods and properties of <code>Points</code> are designed to work only when the last dimension is 3. 
 Therefore, if you want to apply some numpy function or operation to a <code>Points</code> instance, 
@@ -892,13 +892,6 @@ take care to make sure that the result still has shape of <code>[... , 3]</code>
     </div>
 
   </div>
-
-<p>This class represents points in a 3D space. It is a subclass of <code>np.ndarray</code>, and thus supports all numpy functions, methods, and attributes, but also has some additional methods and attributes. </p>
-<p>By default, its shape is always <code>[..., 3]</code>, where 3 indicates the dimension. For example, a <code>Points</code> instance with shape of <code>[2, 4, 3]</code> contains the coordinates of <span class="arithmatex">\(2\times4=8\)</span> 3D points.</p>
-<div class="admonition warning">
-<p class="admonition-title">Keep the last dimension equal to 3</p>
-<p>There is no restriction on changing the last dimension from 3 to any other number. However, all methods and properties of <code>Points</code> are designed to work only when the last dimension is 3. Therefore, if you want to apply some numpy function or operation to a <code>Points</code> instance, take care to make sure that the result still has shape of <code>[... , 3]</code>.</p>
-</div>
                 
               
               
