@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://wxdrizzle.github.io/AICafe_documents/1.0/</loc>
+         <lastmod>2022-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wxdrizzle.github.io/AICafe_documents/1.0/gramma/</loc>
+         <lastmod>2022-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wxdrizzle.github.io/AICafe_documents/1.0/apis/</loc>
+         <lastmod>2022-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wxdrizzle.github.io/AICafe_documents/1.0/apis/elements/points%20copy/</loc>
+         <lastmod>2022-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wxdrizzle.github.io/AICafe_documents/1.0/apis/elements/points/</loc>
+         <lastmod>2022-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wxdrizzle.github.io/AICafe_documents/1.0/user-guide/</loc>
+         <lastmod>2022-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
