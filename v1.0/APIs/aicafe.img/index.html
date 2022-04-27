@@ -425,6 +425,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#aicafe.core.img.cummul_mats" class="md-nav__link">
+    cummul_mats()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#aicafe.core.img.distance" class="md-nav__link">
     distance()
   </a>
@@ -469,6 +476,20 @@
         <li class="md-nav__item">
   <a href="#aicafe.core.img.normalize" class="md-nav__link">
     normalize()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aicafe.core.img.points_ori2xsec" class="md-nav__link">
+    points_ori2xsec()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aicafe.core.img.points_sur_curve" class="md-nav__link">
+    points_sur_curve()
   </a>
   
 </li>
@@ -766,6 +787,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#aicafe.core.img.cummul_mats" class="md-nav__link">
+    cummul_mats()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#aicafe.core.img.distance" class="md-nav__link">
     distance()
   </a>
@@ -810,6 +838,20 @@
         <li class="md-nav__item">
   <a href="#aicafe.core.img.normalize" class="md-nav__link">
     normalize()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aicafe.core.img.points_ori2xsec" class="md-nav__link">
+    points_ori2xsec()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aicafe.core.img.points_sur_curve" class="md-nav__link">
+    points_sur_curve()
   </a>
   
 </li>
@@ -872,6 +914,74 @@
 
 
 
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h4 id="aicafe.core.img.cummul_mats" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">cummul_mats</span><span class="p">(</span><span class="n">mats</span><span class="p">)</span></code>
+
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Compute cumulative multiplications of matrixes.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code class="highlight language-python"><span class="n">mats</span></code>
+          </td>
+          <td>
+                <code class="highlight language-python"><span class="n">ArrayLike</span></code>
+          </td>
+          <td><p>Shape of <code class="highlight"><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">]</span></code>, a group of <span class="arithmatex">\(N\times N\)</span> matrixes.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code class="highlight language-python"><span class="n">mats_cum</span></code>
+          </td>          <td>
+                <code class="highlight language-python"><span class="n">NDArray</span></code>
+          </td>
+          <td><p>Shape of <code class="highlight"><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">]</span></code>. <code class="highlight"><span class="n">mats_cum</span><span class="p">[</span><span class="n">i</span><span class="p">]</span></code> represents <span class="arithmatex">\(A_iA_{i-1}\cdots A_0\)</span>, where <span class="arithmatex">\(A_i\)</span> is the matrix 
+represented by <code class="highlight"><span class="n">rots</span><span class="p">[</span><span class="n">i</span><span class="p">]</span></code>.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+
+  </div>
 
 
 
@@ -1037,7 +1147,7 @@ the result's shape will be <code class="highlight"><span class="p">[</span><span
 
 
 <h4 id="aicafe.core.img.grids_polar_from_bases" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">grids_polar_from_bases</span><span class="p">(</span><span class="n">uvs</span><span class="p">,</span> <span class="n">n_angles</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">n_points_dia</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">grids_polar_from_bases</span><span class="p">(</span><span class="n">uvs</span><span class="p">,</span> <span class="n">n_points_dia</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">n_angles</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span></code>
 
 
 </h4>
@@ -1047,8 +1157,16 @@ the result's shape will be <code class="highlight"><span class="p">[</span><span
 
       <p>Generate polar grids of points from 2D basis vector pairs.</p>
 <p>Specifically, let <span class="arithmatex">\(u_k,v_k\)</span> be the <span class="arithmatex">\(k\)</span>-th pair of basis vectors (parallel to x and y axes, respectively), 
-, <span class="arithmatex">\(A\)</span> be the numbers of angles/diameters, and <span class="arithmatex">\(D\)</span> be the number of points on each diameter. The origin is located at 
-the center of the grid, then the point in the <span class="arithmatex">\(i\)</span>-th row and <span class="arithmatex">\(j\)</span>-th column of the <span class="arithmatex">\(k\)</span>-th grid is</p>
+<span class="arithmatex">\(T\)</span> be the numbers of angles/diameters, and <span class="arithmatex">\(R\)</span> be the number of points on each diameter. The origin is 
+located at the center of the grid, so the point in the <span class="arithmatex">\(i\)</span>-th row and <span class="arithmatex">\(j\)</span>-th column of the <span class="arithmatex">\(k\)</span>-th grid 
+(<span class="arithmatex">\(0\leqslant i \leqslant T-1,0\leqslant j \leqslant R-1\)</span>) is</p>
+<div class="arithmatex">\[
+p_{ij}^k=(i-\frac{R-1}{2})[\cos (\frac{2\pi}{T-1}j)u_k+\sin (\frac{2\pi}{T-1}j)v_k]
+\]</div>
+<figure>
+<p><img alt="girds" src="../../imgs/grids_polar_from_bases.png" width="600" /></p>
+<figcaption>The point coordinates of the resulting grids.</figcaption>
+</figure>
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1075,18 +1193,6 @@ the center of the grid, then the point in the <span class="arithmatex">\(i\)</sp
         </tr>
         <tr>
           <td>
-                <code class="highlight language-python"><span class="n">n_angles</span></code>
-          </td>
-          <td>
-                <code class="highlight language-python"><span class="nb">int</span></code>
-          </td>
-          <td><p>The number of angles/diameters.</p></td>
-          <td>
-                <code class="highlight language-python"><span class="mi">120</span></code>
-          </td>
-        </tr>
-        <tr>
-          <td>
                 <code class="highlight language-python"><span class="n">n_points_dia</span></code>
           </td>
           <td>
@@ -1095,6 +1201,18 @@ the center of the grid, then the point in the <span class="arithmatex">\(i\)</sp
           <td><p>The number of points on each diameter.</p></td>
           <td>
                 <code class="highlight language-python"><span class="mi">100</span></code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code class="highlight language-python"><span class="n">n_angles</span></code>
+          </td>
+          <td>
+                <code class="highlight language-python"><span class="nb">int</span></code>
+          </td>
+          <td><p>The number of angles/diameters.</p></td>
+          <td>
+                <code class="highlight language-python"><span class="mi">120</span></code>
           </td>
         </tr>
     </tbody>
@@ -1115,8 +1233,8 @@ the center of the grid, then the point in the <span class="arithmatex">\(i\)</sp
           </td>          <td>
                 <code class="highlight language-python"><span class="n">NDArray</span></code>
           </td>
-          <td><p>Shape of <code class="highlight"><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span></code>. <code class="highlight"><span class="n">grids</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span></code> represents <span class="arithmatex">\(p_{ij}^k\)</span>, the point in the <span class="arithmatex">\(i\)</span>-th row and <span class="arithmatex">\(j\)</span>-th 
-column of the <span class="arithmatex">\(k\)</span>-th grid.</p></td>
+          <td><p>Shape of <code class="highlight"><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span></code>. <code class="highlight"><span class="n">grids</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span></code> represents <span class="arithmatex">\(p_{i,j}^k\)</span>, the point in the <span class="arithmatex">\(i\)</span>-th row and 
+<span class="arithmatex">\(j\)</span>-th column of the <span class="arithmatex">\(k\)</span>-th grid.</p></td>
         </tr>
     </tbody>
   </table>
@@ -1141,19 +1259,23 @@ column of the <span class="arithmatex">\(k\)</span>-th grid.</p></td>
     <div class="doc doc-contents ">
 
       <p>Generate rectangular (Cartesian) grids of points from 2D basis vector pairs. </p>
-<p>Specifically, let <span class="arithmatex">\(u_k,v_k\)</span> be the <span class="arithmatex">\(k\)</span>-th pair of basis vectors (parallel to x and y axes, respectively), and <span class="arithmatex">\(R,C\)</span> 
-be the numbers of grid rows and columns, respectively, thus <span class="arithmatex">\(1\leqslant i\leqslant R,1\leqslant j\leqslant C\)</span>. 
-Assume the origin is located at the lower-left corner of the grid, i.e., <code class="highlight"><span class="n">loc_ori</span><span class="o">==</span><span class="s1">&#39;lower_left&#39;</span></code>, then the point in 
-the <span class="arithmatex">\(i\)</span>-th row and <span class="arithmatex">\(j\)</span>-th column of the <span class="arithmatex">\(k\)</span>-th grid is</p>
+<p>Specifically, let <span class="arithmatex">\(u_k,v_k\)</span> be the <span class="arithmatex">\(k\)</span>-th pair of basis vectors (parallel to <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> axes, respectively), and 
+<span class="arithmatex">\(R,C\)</span> be the numbers of grid rows and columns, respectively, thus <span class="arithmatex">\(0\leqslant i\leqslant R-1,0\leqslant j\leqslant C-1\)</span>. </p>
+<ul>
+<li>If the origin is located at the lower-left corner of the grid, i.e., <code class="highlight"><span class="n">loc_ori</span><span class="o">==</span><span class="s1">&#39;lower_left&#39;</span></code>, then the point in 
+    the <span class="arithmatex">\(i\)</span>-th row and <span class="arithmatex">\(j\)</span>-th column of the <span class="arithmatex">\(k\)</span>-th grid is</li>
+</ul>
 <div class="arithmatex">\[
-p_{ij}^k=(R-i)v_k+(j-1)u_k,
+p_{ij}^k=ju_k+(R-i-1)v_k,
 \]</div>
-<p>If the original is located at the center of the grid, i.e., <code class="highlight"><span class="n">loc_ori</span><span class="o">==</span><span class="s1">&#39;center&#39;</span></code>, then</p>
+<ul>
+<li>If the original is located at the center of the grid, i.e., <code class="highlight"><span class="n">loc_ori</span><span class="o">==</span><span class="s1">&#39;center&#39;</span></code>, then</li>
+</ul>
 <div class="arithmatex">\[
-p_{ij}^k=(R-i-\frac{R-1}{2})v_k+(j-1-\frac{C-1}{2})u_k.
+p_{ij}^k=(j-\frac{C-1}{2})u_k+(\frac{R-1}{2}-i)v_k.
 \]</div>
 <figure>
-<p><img alt="girds" src="../../imgs/grids_from_bases.png" width="600" /></p>
+<p><img alt="girds" src="../../imgs/grids_rect_from_bases.png" width="480" /></p>
 <figcaption>The point coordinates of the resulting grids with different loc_ori.</figcaption>
 </figure>
 
@@ -1234,8 +1356,8 @@ p_{ij}^k=(R-i-\frac{R-1}{2})v_k+(j-1-\frac{C-1}{2})u_k.
           </td>          <td>
                 <code class="highlight language-python"><span class="n">NDArray</span></code>
           </td>
-          <td><p>Shape of <code class="highlight"><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span></code>. <code class="highlight"><span class="n">grids</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span></code> represents <span class="arithmatex">\(p_{ij}^k\)</span>, the point in the <span class="arithmatex">\(i\)</span>-th row and <span class="arithmatex">\(j\)</span>-th 
-column of the <span class="arithmatex">\(k\)</span>-th grid.</p></td>
+          <td><p>Shape of <code class="highlight"><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span></code>. <code class="highlight"><span class="n">grids</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span></code> represents <span class="arithmatex">\(p_{i,j}^k\)</span>, the point in the <span class="arithmatex">\(i\)</span>-th row and 
+<span class="arithmatex">\(j\)</span>-th column of the <span class="arithmatex">\(k\)</span>-th grid.</p></td>
         </tr>
     </tbody>
   </table>
@@ -1468,6 +1590,209 @@ If a vector in <code class="highlight"><span class="n">vecs</span></code> has le
 
 
 
+<h4 id="aicafe.core.img.points_ori2xsec" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">points_ori2xsec</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">curve</span><span class="p">)</span></code>
+
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Transform given points from original image space (in which the curve is localized) to the space of stacked 
+   cross-sectional images (which are generated from points on the curve).</p>
+<p>Specifically, let the points on the curve be <span class="arithmatex">\(\{c_k\}\)</span>, and <span class="arithmatex">\(t_k\)</span> be the tangent vector of the curve at <span class="arithmatex">\(c_k\)</span>, 
+   then <span class="arithmatex">\(t_k\)</span> is perpendicular to the cross-sectional plane <span class="arithmatex">\(\mathcal{S}_k\)</span> through <span class="arithmatex">\(c_k\)</span>. Given a point <span class="arithmatex">\(p\)</span> to be 
+   transformed, the algorithm first determines between which two planes <span class="arithmatex">\(\mathcal{S}_k,\mathcal{S}_{k+1}\)</span> it lies, 
+   by asserting that the angle between <span class="arithmatex">\(\overrightarrow{pc_k}\)</span> and <span class="arithmatex">\(\overrightarrow{pc_{k+1}}\)</span> must be obtuse. There
+   may be multiple <span class="arithmatex">\(k\)</span>'s satisfying this condition, and the <span class="arithmatex">\(k\)</span> with the minimal <span class="arithmatex">\(\|c_kp\|\)</span> will be selected. If 
+   there is no <span class="arithmatex">\(k\)</span> satisfying the condition, <span class="arithmatex">\(p\)</span> is not <strong>valid for transformation</strong>, thus will be discarded, i.e.,
+   no transformed result of <span class="arithmatex">\(p\)</span> will be included in the return array.</p>
+<p>After determining <span class="arithmatex">\(k\)</span>, the <span class="arithmatex">\(z\)</span>-coordinate of transformed <span class="arithmatex">\(p\)</span> is <span class="arithmatex">\(k+1-\lambda\)</span>, where <span class="arithmatex">\(\lambda(p)\)</span> is calculated 
+   by solving </p>
+<div class="arithmatex">\[
+\left\{\begin{array}{l}
+c=\lambda c_{k}+(1-\lambda) c_{k+1} \\
+t=\lambda t_{k}+(1-\lambda) t_{k+1} \\
+\langle cp, t\rangle=0
+\end{array}\right.
+\]</div>
+<p>where <span class="arithmatex">\(t\)</span> can be regarded as the norm vector of the cross-sectional plane <span class="arithmatex">\(\mathcal{S}\)</span> that <span class="arithmatex">\(p\)</span> lies in, and <span class="arithmatex">\(c\)</span> is
+the intersection point of <span class="arithmatex">\(\mathcal{S}\)</span> and <span class="arithmatex">\(c_kc_{k+1}\)</span>.</p>
+<p>The <span class="arithmatex">\(x\)</span>- and <span class="arithmatex">\(y\)</span>-coordinates of transformed <span class="arithmatex">\(p\)</span> are calculated as the projections of <span class="arithmatex">\(\overrightarrow{cp}\)</span> on 
+the two unit basis vectors <span class="arithmatex">\(u,v\)</span> of <span class="arithmatex">\(\mathcal{S}\)</span>, where <span class="arithmatex">\(u,v\)</span> are calculated using the algorithm described in 
+<a href="#aicafe.core.img.vecs_basis_xsec">aicafe.img.vecs_basis_xsec</a>.</p>
+<figure>
+<p><img alt="girds" src="../../imgs/points_ori2xsec.png" width="350" /></p>
+</figure>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code class="highlight language-python"><span class="n">points</span></code>
+          </td>
+          <td>
+                <code class="highlight language-python"><span class="n">ArrayLike</span></code>
+          </td>
+          <td><p>Shape of <code class="highlight"><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span></code>, 3D coordinates representing points in the original image space. These points are 
+usually close to the curve.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code class="highlight language-python"><span class="n">curve</span></code>
+          </td>
+          <td>
+                <code class="highlight language-python"><span class="n">ArrayLike</span></code>
+          </td>
+          <td><p>Shape of <code class="highlight"><span class="p">[</span><span class="n">C</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span></code>, 3D coordinates representing the points on the curve.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code class="highlight language-python"><span class="n">NDArray</span></code>
+          </td>
+          <td><p>Shape of <code class="highlight"><span class="p">[</span><span class="n">P0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span></code>, 3D coordinates representing points in the cross-sectional image space, each 
+of which corresponds to a point valid for transformation in <code class="highlight"><span class="n">points</span></code>. <code class="highlight"><span class="n">P0</span></code> is the number of valid points.</p></td>
+        </tr>
+        <tr>
+          <td>
+                <code class="highlight language-python"><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>
+          </td>
+          <td><p>Shape of <code class="highlight"><span class="n">P0</span></code>, indexes of points valid for transformation.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h4 id="aicafe.core.img.points_sur_curve" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">points_sur_curve</span><span class="p">(</span><span class="n">curve</span><span class="p">,</span> <span class="n">box</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rad</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span></code>
+
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Get the grid points surrounding a curve.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code class="highlight language-python"><span class="n">curve</span></code>
+          </td>
+          <td>
+                <code class="highlight language-python"><span class="n">ArrayLike</span></code>
+          </td>
+          <td><p>Shape of <code class="highlight"><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span></code> (<span class="arithmatex">\(P\geqslant 2\)</span>), an array of 3D coordinates representing the points on the curve. 
+The coordinates must be non-negative.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code class="highlight language-python"><span class="n">box</span></code>
+          </td>
+          <td>
+                <code class="highlight language-python"><span class="n">ArrayLike</span></code>
+          </td>
+          <td><p>Shape of <code class="highlight"><span class="p">[</span><span class="mi">3</span><span class="p">]</span></code>, the bounding box containing the curve and the surrounding points. Note that the box always
+has a vertex of <span class="arithmatex">\((0,0,0)\)</span>, thus only 3 (rather than 6) parameters are needed. If <code class="highlight"><span class="kc">None</span></code>, it will be 
+calculated as the smallest box that contains the curve.</p></td>
+          <td>
+                <code class="highlight language-python"><span class="kc">None</span></code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code class="highlight language-python"><span class="n">rad</span></code>
+          </td>
+          <td>
+                <code class="highlight language-python"><span class="nb">float</span></code>
+          </td>
+          <td><p>A point is surrounding the curve if and only if there exists a point on the curve such that the distance 
+between the two points is less than or equal to <code class="highlight"><span class="n">radius</span></code>.</p></td>
+          <td>
+                <code class="highlight language-python"><span class="mi">3</span></code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code class="highlight language-python"><span class="n">NDArray</span></code>
+          </td>
+          <td><p>Shape of <code class="highlight"><span class="p">[</span><span class="n">Q</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span></code>, an array of 3D coordinates representing the grid points around the curve.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
 <h4 id="aicafe.core.img.sample_array" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">sample_array</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="n">mode_interp</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">value_pad</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
 
@@ -1586,15 +1911,6 @@ the point <span class="arithmatex">\(p_{ij}\)</span> is in the 0.3-th row and 0.
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">img</span><span class="o">.</span><span class="n">sample_array</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">points</span><span class="p">)</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">array</span><span class="p">([</span><span class="mf">1.</span>  <span class="p">,</span> <span class="mf">1.</span>  <span class="p">,</span> <span class="mf">7.</span>  <span class="p">,</span> <span class="mf">5.25</span><span class="p">])</span> 
 </code></pre></div>
-      <div class="admonition note">
-<p class="admonition-title">Calculation is done through SciPy.</p>
-<p>While nowadays most of interpolation operations, especially those integrated in deep learning models, are done 
-via Pytorch's <a href="https://pytorch.org/docs/stable/generated/torch.nn.functional.grid_sample.html">grid_sample</a>, 
-this function is currently based on SciPy's 
-<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.RegularGridInterpolator.html">RegularGridInterpolator</a>
-rather than PyTorch, as the regular image processing part of AICafe involves no GPU acceleration but its speed 
-is sufficient for usage.</p>
-</div>
 
     </div>
 
@@ -1607,7 +1923,7 @@ is sufficient for usage.</p>
 
 
 <h4 id="aicafe.core.img.vecs_basis_xsec" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">vecs_basis_xsec</span><span class="p">(</span><span class="n">curve</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">vecs_basis_xsec</span><span class="p">(</span><span class="n">curve</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tans</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rots_cum</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
 </h4>
@@ -1640,7 +1956,34 @@ at the <span class="arithmatex">\(i\)</span>-th point. For the definition of the
           </td>
           <td><p>Shape of <code class="highlight"><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span></code> (<span class="arithmatex">\(P\geqslant 2\)</span>), an array of 3D coordinates representing the points on the curve.</p></td>
           <td>
-              <em>required</em>
+                <code class="highlight language-python"><span class="kc">None</span></code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code class="highlight language-python"><span class="n">tans</span></code>
+          </td>
+          <td>
+                <code class="highlight language-python"><span class="n">ArrayLike</span></code>
+          </td>
+          <td><p>Shape of <code class="highlight"><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span></code>, an array of 3D coordinates, each of which represents the tangent vector at a point on 
+the curve. If <code class="highlight"><span class="n">curve</span></code> is not <code class="highlight"><span class="kc">None</span></code>, <code class="highlight"><span class="n">tans</span></code> will not be used, and tangent vectors will be calculated using
+<code class="highlight"><span class="n">curve</span></code>.</p></td>
+          <td>
+                <code class="highlight language-python"><span class="kc">None</span></code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code class="highlight language-python"><span class="n">rots_cum</span></code>
+          </td>
+          <td>
+                <code class="highlight language-python"><span class="n">ArrayLike</span></code>
+          </td>
+          <td><p>Shape of <code class="highlight"><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span></code>, an array of cumulative rotation matrixes. If <code class="highlight"><span class="kc">None</span></code>, it will be calculated from 
+<code class="highlight"><span class="n">tans</span></code>.</p></td>
+          <td>
+                <code class="highlight language-python"><span class="kc">None</span></code>
           </td>
         </tr>
     </tbody>
@@ -1663,6 +2006,24 @@ at the <span class="arithmatex">\(i\)</span>-th point. For the definition of the
           </td>
           <td><p>Shape of <code class="highlight"><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span></code>. For <span class="arithmatex">\(1\leqslant i\leqslant P\)</span>, <code class="highlight"><span class="n">uvs</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span></code> represents <span class="arithmatex">\(u_i\)</span>, and <code class="highlight"><span class="n">uvs</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span></code> 
 represents <span class="arithmatex">\(v_i\)</span>.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code class="highlight language-python"><span class="ne">ValueError</span></code>
+          </td>
+          <td><p>If <code class="highlight"><span class="n">curve</span></code> and <code class="highlight"><span class="n">tans</span></code> are both <code class="highlight"><span class="kc">None</span></code>.</p></td>
         </tr>
     </tbody>
   </table>
